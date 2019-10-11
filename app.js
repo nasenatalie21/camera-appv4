@@ -1,7 +1,7 @@
 // Set constraints for the video stream
 var front = false;
-//var constraints = {video: {facingMode:{exact:'environment'}}, audio: false };
-var constraints = {video: {facingMode: (front? 'user':'environment')}};
+var constraints = {video: {facingMode:{exact:'environment'}}, audio: false };
+//var constraints = {video: {facingMode: (front? 'user':'environment')}};
 var track = null;
 var shouldFaceUser = true;
 
@@ -20,7 +20,7 @@ function cameraStart() {
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
-            //track = stream.getTracks()[0];
+            track = stream.getTracks()[0];
             cameraView.srcObject = stream;
         })
         .catch(function(error) {
@@ -64,4 +64,4 @@ saveImage.onclick = function() {
 };
 
 // Start the video stream when the window loads
-window.addEventListener("load", cameraStart, true);
+window.addEventListener("load", cameraStart, false);
