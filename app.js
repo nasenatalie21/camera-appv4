@@ -1,6 +1,6 @@
 // Set constraints for the video stream
 var front = false;
-var constraints = {video: {facingMode:'environment'}, audio: false };
+var constraints = {video: {facingMode:'front'}, audio: false };
 //var constraints = {video: {facingMode: (front? 'environment':'user')}};
 var track = null;
 
@@ -63,4 +63,4 @@ saveImage.onclick = function() {
 };
 
 // Start the video stream when the window loads
-window.addEventListener("load", cameraStart, true);
+window.addEventListener("load", cameraStart, false);
