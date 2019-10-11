@@ -1,6 +1,7 @@
 // Set constraints for the video stream
 var front = false;
-var constraints = {video: {facingMode:{exact:'environment'}}, audio: false };
+//var constraints = {video: {facingMode:{exact:'environment'}}, audio: false };
+var constraints = {video: {facingMode: (front? 'user':'environment')}};
 var track = null;
 var shouldFaceUser = true;
 
@@ -48,6 +49,7 @@ cameraTrigger.onclick = function() {
 // });
 
 cameraSwitch.onclick = function(){
+    cameraView.srcObject = null
     front = !front;
 };
 
