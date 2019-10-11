@@ -1,7 +1,7 @@
 // Set constraints for the video stream
 var front = false;
 document.getElementById("#camera--switch").onclick = function(){ front = !front; };
-var constraints = { video: { facingMode: (front? "user" : "environment")}, audio: false };
+var constraints = { video: { facingMode: "environment"}, audio: false };
 var track = null;
 var shouldFaceUser = true;
 
@@ -16,7 +16,7 @@ const cameraView = document.querySelector("#camera--view"),
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
-    constraints.video = { facingMode: shouldFaceUser ? 'user' : 'environment'}
+    //constraints.video = { facingMode: shouldFaceUser ? 'user' : 'environment'}
     navigator.mediaDevices
         .getUserMedia(constraints)
         .then(function(stream) {
