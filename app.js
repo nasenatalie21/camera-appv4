@@ -3,7 +3,6 @@ var front = false;
 var constraints = {video: {facingMode:'environment'}, audio: false };
 //var constraints = {video: {facingMode: (front? 'environment':'user')}};
 var track = null;
-var shouldFaceUser = true;
 
 
 // Define constants
