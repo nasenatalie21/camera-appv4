@@ -18,10 +18,17 @@ html, body{
 }
 
 #camera--view, #camera--sensor, #camera--output{
-    /* transform: scaleX(-1); */
-    -webkit-transform: scaleX(-1);
+    /* back cam */
     transform: scaleX(-1);
+    
+    /*front cam*/
+    /* -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); */
     filter: FlipH;
+}
+
+#camera--view--backcam{
+    transform: scaleX(-1);
 }
 
 #camera--trigger{
