@@ -2,10 +2,7 @@
 var front = false;
 var constraints = {video: {
     //facingMode:'environment'
-    mandatory:{
-        minWidth: this.params.dest_width,
-        minHeight: this.params.dest_height,
-    }
+    facingMode: {exact: mode}
     }, audio: false };
 var track = null;
 var shouldFaceUser = true;
